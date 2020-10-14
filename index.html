@@ -12,8 +12,29 @@
 <body>
     <div class="flex-col">
         <div class="header">
-            <nav></nav>
-            <section class="banner">
+            <nav>
+                <div id="hamburgerMenu">
+                    <input type="checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menuItems">
+                        <a href="#home">
+                            <li>Hem</li>
+                        </a>
+                        <a href="#aboutSection">
+                            <li>Om</li>
+                        </a>
+                        <a href="#footer">
+                            <li>Kontakt</li>
+                        </a>
+                    </ul>
+
+                </div>
+
+            </nav>
+            <section class="banner" id="home">
                 <div>
                     <h1>Welcome to nature</h1>
                 </div>
@@ -25,15 +46,17 @@
                 </div>
 
             </section>
-            <div class="icon "></div>
+            <a href="#aboutSection"><svg width="30px" height="30px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-down" class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM212 140v116h-70.9c-10.7 0-16.1 13-8.5 20.5l114.9 114.3c4.7 4.7 12.2 4.7 16.9 0l114.9-114.3c7.6-7.6 2.2-20.5-8.5-20.5H300V140c0-6.6-5.4-12-12-12h-64c-6.6 0-12 5.4-12 12z"></path></svg></a>
+
         </div>
+
 
         <!-- main page -->
 
         <section class="about">
             <h1>Träffa laget</h1>
 
-            <div class="container">
+            <div class="container" id="aboutSection">
                 <div class="card">
                     <h3>Rakib</h3>
                     <figure>
@@ -64,8 +87,10 @@
                 </div>
             </div>
         </section>
+        <a href="#footer" class="nav-arrow"><svg width="30px" height="30px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-down" class="svg-inline--fa fa-arrow-alt-circle-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="black" d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM212 140v116h-70.9c-10.7 0-16.1 13-8.5 20.5l114.9 114.3c4.7 4.7 12.2 4.7 16.9 0l114.9-114.3c7.6-7.6 2.2-20.5-8.5-20.5H300V140c0-6.6-5.4-12-12-12h-64c-6.6 0-12 5.4-12 12z"></path></svg></a>
 
-        <footer>
+
+        <footer id="footer">
             <div>
                 <p>Tegel Consulting AB</p>
                 <p>Agatvägen 18</p>
