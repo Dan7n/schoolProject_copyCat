@@ -1,0 +1,58 @@
+@mixin center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin card {
+    height: auto;
+    min-height: 70%;
+    max-height: 85%;
+    width: 48%;
+    margin: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 0px 0px 40px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px -1px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px 0px 40px -1px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px 0px 40px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px -1px rgba(0, 0, 0, 0.75);
+}
+
+@mixin photo-frame {
+    border: 1px solid #A9A9A9;
+    border-radius: 50%;
+    @include shadow;
+}
+
+@mixin border-radius {
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 0px solid #000000;
+}
+
+@mixin quote-icon {
+    background-image: url('./../../assets/quote-right-solid.svg');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    color: black;
+    position: relative;
+    bottom: 13px;
+    padding-right: 5px;
+}
+
+@mixin test {
+    border: 1px solid red;
+}
