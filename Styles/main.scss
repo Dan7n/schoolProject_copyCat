@@ -45,8 +45,9 @@ nav {
             transform: translate(-50%, 0);
             opacity: -1;
             z-index: -1;
+            pointer-events: none;
             transform-origin: 0% 0%;
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.7s ease-in-out;
         }
         li {
             color: white;
@@ -65,7 +66,7 @@ nav {
         }
         span {
             display: block;
-            width: 45px;
+            width: 44px;
             height: 5px;
             position: relative;
             left: 90%;
@@ -76,7 +77,7 @@ nav {
             border-radius: 5px;
             z-index: -1;
             transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease-in-out;
         }
         span:first-child {
             transform-origin: 0% 0%;
@@ -101,8 +102,8 @@ nav {
         }
         input:checked~ul {
             opacity: 1;
-            transition: ease-in-out 0.7s;
             background-color: $transparent-white;
+            pointer-events: auto;
         }
         input:checked~nav {
             height: 17vh;
@@ -209,10 +210,17 @@ footer {
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     line-height: 150%;
     font-size: 1.15rem;
+    .center-this {
+        height: 42%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
     .two-cols {
         display: flex;
         flex-direction: column;
@@ -233,7 +241,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 845px) {
+@media screen and (max-width: $break-point-md) {
     .card {
         width: 90% !important;
         figcaption {
@@ -242,7 +250,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 845px) {
+@media screen and (min-width: $break-point-md) {
     #hamburgerMenu {
         input {
             display: none !important;
@@ -255,6 +263,7 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+            pointer-events: auto;
             li {
                 font-size: 1em;
             }
@@ -265,7 +274,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 515px) {
+@media screen and (max-width: $break-point-sm) {
     nav {
         span {
             transform: translate(-20px, 0);

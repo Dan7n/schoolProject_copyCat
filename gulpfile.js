@@ -5,7 +5,7 @@ let browserSync = require('browser-sync').create();
 
 
 gulp.task("compile", function() {
-    return gulp.src("./Styles/*.scss")
+    return gulp.src("./Styles/**/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("css"))
         .pipe(minify())
@@ -18,7 +18,7 @@ gulp.task('reload', gulp.series("compile", function() {
     browserSync.init({
         server: "./"
     });
-    gulp.watch("./Styles/*.scss", gulp.series("compile"));
+    gulp.watch("./Styles/**/*.scss", gulp.series("compile"));
     gulp.watch("./*.html").on('change', browserSync.reload);
 }));
 

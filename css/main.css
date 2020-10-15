@@ -37,8 +37,9 @@ nav {
       transform: translate(-50%, 0);
       opacity: -1;
       z-index: -1;
+      pointer-events: none;
       transform-origin: 0% 0%;
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.7s ease-in-out; }
     nav #hamburgerMenu li {
       color: white;
       margin: 4px;
@@ -54,7 +55,7 @@ nav {
       -webkit-touch-callout: none; }
     nav #hamburgerMenu span {
       display: block;
-      width: 45px;
+      width: 44px;
       height: 5px;
       position: relative;
       left: 90%;
@@ -65,7 +66,7 @@ nav {
       border-radius: 5px;
       z-index: -1;
       transform-origin: 4px 0px;
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease-in-out; }
     nav #hamburgerMenu span:first-child {
       transform-origin: 0% 0%; }
     nav #hamburgerMenu span:nth-last-child(2) {
@@ -83,8 +84,8 @@ nav {
       right: 50%; }
     nav #hamburgerMenu input:checked ~ ul {
       opacity: 1;
-      transition: ease-in-out 0.7s;
-      background-color: rgba(255, 255, 255, 0.1); }
+      background-color: rgba(255, 255, 255, 0.1);
+      pointer-events: auto; }
     nav #hamburgerMenu input:checked ~ nav {
       height: 17vh; }
 
@@ -203,10 +204,16 @@ footer {
   width: 100%;
   height: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   line-height: 150%;
   font-size: 1.15rem; }
+  footer .center-this {
+    height: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
   footer .two-cols {
     display: flex;
     flex-direction: column;
@@ -238,7 +245,8 @@ footer {
     opacity: 1 !important;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    pointer-events: auto; }
     #hamburgerMenu ul li {
       font-size: 1em; }
     #hamburgerMenu ul a {
