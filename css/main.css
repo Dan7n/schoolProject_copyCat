@@ -25,21 +25,23 @@ nav {
     nav #hamburgerMenu a {
       text-decoration: none;
       z-index: 1; }
+      nav #hamburgerMenu a:hover {
+        text-decoration: underline white; }
     nav #hamburgerMenu ul {
       list-style-type: none;
       background-color: rgba(255, 255, 255, 0.1);
       width: 100%;
       margin: 0px;
-      padding: 0;
+      padding-top: 60px;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, 0);
+      transform: translate(-50%, -25%);
       opacity: -1;
       z-index: -1;
       pointer-events: none;
       transform-origin: 0% 0%;
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.7s ease-in-out; }
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.35s ease-in-out; }
     nav #hamburgerMenu li {
       color: white;
       margin: 4px;
@@ -213,7 +215,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: flex-start; }
   footer .two-cols {
     display: flex;
     flex-direction: column;
@@ -229,6 +231,9 @@ footer {
       display: flex;
       justify-content: space-around;
       align-items: center; }
+      footer .two-cols .two-rows .tw {
+        width: 25px;
+        margin-right: 9px; }
 
 @media screen and (max-width: 845px) {
   .card {
@@ -246,7 +251,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    pointer-events: auto; }
+    pointer-events: auto !important;
+    padding-top: 1% !important;
+    padding-right: 1% !important; }
     #hamburgerMenu ul li {
       font-size: 1em; }
     #hamburgerMenu ul a {
@@ -262,6 +269,9 @@ footer {
   footer {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-around;
     padding-left: 35%;
     min-height: 350px;
-    text-align: left; } }
+    text-align: left; }
+    footer .center-this {
+      height: fit-content; } }
